@@ -2,93 +2,95 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.ExceptionServices;
 
 class Program
     {
         static void Main(string[] args)
         {
 
-       // //PART ONE 
+        //PART ONE 
 
-       // Console.WriteLine("Type: \"I like\" into the console");
-       //string iLike = Console.ReadLine();
+        //Console.WriteLine("Type: \"I like\" into the console");
+        //string iLike = Console.ReadLine();
 
-       // string[] jokeArray = { "pizza", "cookies", "ice cream", "donuts" };
-       // foreach (string food in jokeArray)
-       // {
-       //     //jokeArray.Append(iLike);
-
-       //     Console.WriteLine(iLike + " " + food);
-       // }
-
-       // for (int i = 0; i < jokeArray.Length; i++)
-       // {
-       //     Console.WriteLine(jokeArray[i]);
-       // }
-       // Console.ReadLine();
-
-       // //INFINITE LOOP parts 2 and 3 and 4
-
-       // Console.WriteLine("Click the \"Enter \"button");
-       // Console.ReadLine();
+        //string[] jokeArray = { "pizza", "cookies", "ice cream", "donuts" };
 
 
-       // do
-       // {
-       //     iLike += " these, too. They are yummy.";
-       //     Console.WriteLine(iLike);
-       // }
-       // //while (true)
-       // //{
-       // //INFINITE LOOP CONDITION 
-       // //}
+        //for (int i = 0; i < jokeArray.Length; i++)
+        //{
 
-       // while (jokeArray.Length < 2);
-       // {
+        //    jokeArray[i] = iLike + " " + jokeArray[i];
+        //}
 
-       // }
+        //for (int i = 0; i < jokeArray.Length; i++)
+        //{
+        //    Console.WriteLine(jokeArray[i]);
+        //}
+        //Console.ReadLine();
 
-       // Console.ReadLine();
+        //INFINITE LOOP parts 2 and 3 and 4
 
-       // // PART 5 
-
-       // for (int i = 0; i <= 12; i = i +3 )
-       // {
-       //     Console.WriteLine(i);
-       // }
-
-       // //PARTs 6, 7, and 8 
-
-       // Console.WriteLine("You won! Choose either 0, 1, 2, or 3 to receive your vacation destination!");
-
-       // List<string> VacationList = new List<string>();
-       // VacationList.Add("Hawaii");
-       // VacationList.Add("Tokyo");
-       // VacationList.Add("Yosemite");
-       // VacationList.Add("Disney World");
-       // int SummerVacation = Convert.ToInt32(Console.ReadLine());
-       // try
-       // {
-       //     Console.WriteLine("Your vacation destination is:" + VacationList[SummerVacation]);
-       // }
-       // catch
-       // {
-       //     Console.WriteLine("You entered a different character. Please only choose 0-3");
-       // }
+        //Console.WriteLine("Click the \"Enter \"button");
+        //Console.ReadLine();
 
 
-       // foreach (string vacation in VacationList)
-       // {
-           
-       //         Console.WriteLine("Other Possibility:" + vacation);
-       //     break; 
-       // }
+        //do
+        //{
+        //    iLike += " these, too. They are yummy.";
+        //    Console.WriteLine(iLike);
+        //}
+        ////while (true)
+        ////{
+        ////INFINITE LOOP CONDITION 
+        ////}
 
-        //Part 9 -- NOT COMPLETE/WORKING
+        //while (jokeArray.Length < 2);
+        //{
 
-        Console.WriteLine("Which is your favorite type of animal from the list?");
+        //}
 
-      
+        //Console.ReadLine();
+
+        //// PART 5 
+
+        //for (int i = 0; i <= 12; i = i + 3)
+        //{
+        //    Console.WriteLine(i);
+        //}
+
+        ////PARTs 6, 7, and 8
+
+        //Console.WriteLine("Challenge: see if you can guess a place on this mystery list.");
+
+        //List<string> VacationList = new List<string>();
+        //VacationList.Add("Hawaii");
+        //VacationList.Add("Tokyo");
+        //VacationList.Add("Yosemite");
+        //VacationList.Add("Paris");
+        //string SummerVacation = Console.ReadLine();
+
+        //for (int i =0; i < VacationList.Count; i++)
+        //{
+        //    if (VacationList[i] == SummerVacation)
+        //    {
+        //        Console.WriteLine("Congrats! You found the index of this list, it' is " + i);
+        //        break;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Sorry! That location wasn't on the list.");
+
+        //    }
+
+        //}
+
+
+
+        //Part 9 and 10 
+
+        Console.WriteLine("Select and type one animal from the following list to see if it has a match: sloth, panda, penguin, dog, cat.");
+        string animalName = Console.ReadLine();
 
         List<string> animalList = new List<string>();
         animalList.Add("sloth");
@@ -98,48 +100,15 @@ class Program
         animalList.Add("dog");
         animalList.Add("cat");
 
-        try
+        for (int i = 0; i < animalList.Count; i++)
         {
-            foreach (string animal in animalList)
-            {
-                Console.WriteLine(animal.ToString() + " ");
+            foreach
             }
-            Console.ReadLine();
-
-            Console.WriteLine("Find out what index each animal is");
-
-            int index;
-            for (int i = 0; i < animalList.Count; i++)
-            {
-                if (animalList.Count > 6)
-                {
-                    index = i;
-                    break;
-
-
-                }  
-               
-            }
-          
         }
 
-        catch (Exception e)
-        {
-            Console.WriteLine("You entered an animal name that does not exit. Look at list and try again.");
-        }
 
-        // Finding the index of each animal (not working) 
-        int index1 = animalList.FindIndex(a => a.Contains(' '));
-        Console.WriteLine("List Item ('panda') at Index: " + index1);
-        string animalName=Console.ReadLine();
 
-        foreach (string animal in animalList);
-        {
-            Console.WriteLine(index1);
-            
-        }
-
-        //PART 11
+        ////PART 11
 
         List<string> candyList = new List<string>();
         candyList.Add("sprees");
@@ -157,8 +126,8 @@ class Program
         try
         {
             foreach (string candy in candyList)
-                {
-               candyList.Remove(candy);
+            {
+                candyList.Remove(candy);
             }
         }
 

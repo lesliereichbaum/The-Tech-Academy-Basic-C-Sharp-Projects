@@ -5,6 +5,9 @@ class Program
 { 
         static void Main(string[] args)
         {
+        Console.WriteLine("Pick a number to divide each number in this list by.");
+
+
         List<int> numberList = new List<int>();
         numberList.Add(2);
         numberList.Add(4);
@@ -13,7 +16,7 @@ class Program
         numberList.Add(10);
         numberList.Add(12);
         numberList.Add(14);
-
+   
         foreach (int number in numberList)
         {
             Console.WriteLine(number);
@@ -21,7 +24,6 @@ class Program
        
         try
         {
-            Console.WriteLine("Pick a number to divide each number in this list by.");
             int numberTwo = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Dividing....");
             
@@ -30,8 +32,7 @@ class Program
                 int result = number / numberTwo;
                 Console.WriteLine(result);
             }
-            
-            Console.ReadLine();
+           
         }
         catch (FormatException ex)
         {
@@ -47,13 +48,11 @@ class Program
         {
             Console.WriteLine(ex.Message);
         }
-       
-        finally
-        {
-            Console.WriteLine("You must have input a non whole number. Please try again.");
-       
-        }
-        Console.ReadLine();
+
+
+        Console.WriteLine("Now outside the try/catch block. Continuing program execution");
+
+    Console.ReadLine();
     }
     }
 
