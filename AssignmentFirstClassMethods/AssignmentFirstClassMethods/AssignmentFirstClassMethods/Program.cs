@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Diagnostics.CodeAnalysis;
 
 namespace AssignmentFirstClassMethods
 {
@@ -7,16 +7,28 @@ namespace AssignmentFirstClassMethods
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Type a number that you want to do a math operation on");
-            int AddFive = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Your number plus two" + );
-           
-            int addingtest = Integer.AddFive(2);
-            {
-                int multiplicationtest = Integer.MultSix(4);
-            }
 
-            int divtest = Integer.DivHundred(10);
+           //ADD 
+            Console.WriteLine("Type a number");
+            int inputAdding = Convert.ToInt32(Console.ReadLine());
+           
+            int addingtest = Integer.AddFive(inputAdding);
+            Console.WriteLine("Your number plus five is " + addingtest);
+
+            //MULT 
+                Console.WriteLine("Type a number");
+                int inputMult = Convert.ToInt32(Console.ReadLine());
+
+                int multiplicationtest = Integer.MultSix(inputMult);
+            Console.WriteLine("your number times six is " + multiplicationtest);
+            //Sub
+            Console.WriteLine("Type a number");
+            int inputDiv = Convert.ToInt32(Console.ReadLine());
+
+            int subtest = Integer.SubHundred(10);
+            Console.WriteLine("your number subtracted by 100 is  "+ subtest);
+            
+
         }
 
          

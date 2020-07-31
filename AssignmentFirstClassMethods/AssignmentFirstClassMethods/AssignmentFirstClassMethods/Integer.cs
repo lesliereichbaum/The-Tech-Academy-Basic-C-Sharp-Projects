@@ -19,10 +19,10 @@ namespace AssignmentFirstClassMethods
             return multNumber;
         }
 
-        public static int DivHundred(int input3)
+        public static int SubHundred(int input3)
         {
-            int DivNumber = input3 / 100;
-            return DivNumber;
+            int SubNumber = input3 - 100;
+            return SubNumber;
 
     }
            
