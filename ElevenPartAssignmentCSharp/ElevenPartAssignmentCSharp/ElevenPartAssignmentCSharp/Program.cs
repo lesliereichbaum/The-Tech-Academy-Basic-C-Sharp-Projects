@@ -89,26 +89,47 @@ class Program
 
         //Part 9 and 10 
 
-        Console.WriteLine("Select and type one animal from the following list to see if it has a match: sloth, panda, penguin, dog, cat.");
-        string animalName = Console.ReadLine();
+        //List<string> animalList = new List<string>();
 
-        List<string> animalList = new List<string>();
-        animalList.Add("sloth");
-        animalList.Add("panda");
-        animalList.Add("penguin");
-        animalList.Add("panda");
-        animalList.Add("dog");
-        animalList.Add("cat");
-
-        for (int i = 0; i < animalList.Count; i++)
-        {
-            foreach
-            }
-        }
+        //Console.WriteLine("Type in an animal name to see the index");
 
 
+        //animalList.Add("sloth");
+        //animalList.Add("panda");
+        //animalList.Add("penguin");
+        //animalList.Add("panda");
+        //animalList.Add("dog");
+        //animalList.Add("cat");
 
-        ////PART 11
+        //foreach (string animal in animalList)
+        //{
+        //    Console.WriteLine(animal);
+        //}
+
+        //string animalName = Console.ReadLine();
+
+
+        //for(int i=0; i < animalList.Count; i++)
+        //{
+        //    if (animalName == animalList[i])
+        //    {
+        //        {
+        //            Console.WriteLine(i);
+        //        }
+        //    }
+        //    else if (animalList.IndexOf(animalName) == -1)
+        //    {
+        //        Console.WriteLine("This is not an option.");
+        //        break;
+        //    }
+
+        //}
+
+        //Console.ReadLine();
+
+
+
+        //    ////PART 11
 
         List<string> candyList = new List<string>();
         candyList.Add("sprees");
@@ -117,27 +138,29 @@ class Program
         candyList.Add("jaw breaker");
         candyList.Add("sweet tarts");
         candyList.Add("gummy bears");
+        
 
-        foreach (string candy in candyList) ;
-        {
-            Console.WriteLine(candyList);
-        }
+        List<string> compareList = new List<string>();
 
-        try
+
+        foreach (string candy in candyList) 
         {
-            foreach (string candy in candyList)
+            if (compareList.Contains(candy))
             {
-                candyList.Remove(candy);
+                Console.WriteLine(candy + " has already been listed in list");
+            }
+
+            else
+            {
+                Console.WriteLine(candy + " has NOT been on the list");
+                compareList.Add(candy);
             }
         }
 
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
+        
 
     }
-       
-    }
+
+}
 
 
