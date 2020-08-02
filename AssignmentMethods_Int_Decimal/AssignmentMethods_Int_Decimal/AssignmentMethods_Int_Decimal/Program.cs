@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Encodings.Web;
 
 namespace AssignmentMethods_Int_Decimal
 {
@@ -6,25 +7,25 @@ namespace AssignmentMethods_Int_Decimal
     {
         static void Main(string[] args)
         {
-
+            //First Method 
             Integer firstInt = new Integer();
             int newInt = 8;
             int result = firstInt.AddInteger(newInt);
-            Console.WriteLine(result)
+            Console.WriteLine(result);
 
-
+            //Second Method 
              Integer secInt = new Integer();
-            decimal newDec = 1;
-            decimal result = secInt.AddInteger(newDec);
-            Console.WriteLine(result)
+            decimal newDec = 5.5m;
+            decimal decResult = secInt.AddInteger(newDec);
+            Console.WriteLine(decResult);
+
+            //Third Method 
+            Integer thirdInt = new Integer();
+            string newMult = "10";
+            int multResult = thirdInt.AddInteger(newMult);
+            Console.WriteLine(multResult);
       
 
-            //ADD 
-            Console.WriteLine("Type a number into console");
-            int firstIntAdd = Convert.ToInt32(Console.ReadLine());
-
-            int addThis = Integer.AddInteger(firstIntAdd);
-            Console.WriteLine("Your number plus 5" + addThis);
         }
     }
 }
