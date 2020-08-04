@@ -13,6 +13,8 @@ namespace AbstractPersonAssignment
 
             myEmployee.SayName();
 
+            IQuittable theyQuit = myEmployee;
+            theyQuit.Quit(myEmployee.firstName, myEmployee.lastName);
         }
     }
 }
