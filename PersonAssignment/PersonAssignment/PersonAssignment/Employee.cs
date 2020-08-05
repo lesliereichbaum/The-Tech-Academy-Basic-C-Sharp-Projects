@@ -8,6 +8,14 @@ namespace PersonAssignment
     {
         public int ID { get; set;  } //ID property with variable int 
     }
-
-
+    public enum DaysOfTheWeek
+    {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
 }
