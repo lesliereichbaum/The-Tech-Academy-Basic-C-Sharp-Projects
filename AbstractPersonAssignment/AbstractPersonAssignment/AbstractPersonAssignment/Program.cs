@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AbstractPersonAssignment
 {
@@ -15,6 +16,13 @@ namespace AbstractPersonAssignment
 
             IQuittable theyQuit = myEmployee;
             theyQuit.Quit(myEmployee.firstName, myEmployee.lastName);
+
+            //Attempt at overloading operators 
+            Employee employee = new Person();
+            employee.ID = new List<ID>();
+            employee.Person = "Leslie";
+            employee == IDi;
+
         }
     }
 }
