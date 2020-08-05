@@ -17,12 +17,12 @@ namespace AbstractPersonAssignment
 
           foreach (string element in thingsEmployee.things)
             {
-                Console.WriteLine( thingsEmployee + "{}"); //not sure how to make string print 
+                Console.WriteLine( element); //not sure how to make string print 
             }
 
           foreach (int element in numEmployee.things)
             {
-                Console.WriteLine(numEmployee); // not sure how to make int print 
+                Console.WriteLine(element); // not sure how to make int print 
             }
 
             //Employee myEmployee = new Employee();

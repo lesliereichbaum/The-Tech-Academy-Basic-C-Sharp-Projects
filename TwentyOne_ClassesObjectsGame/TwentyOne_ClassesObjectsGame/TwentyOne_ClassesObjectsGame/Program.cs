@@ -10,17 +10,6 @@ namespace TwentyOne_ClassesObjectsGame
     {
         static void Main(string[] args)
         {
-            //TwentyOneGame game = new TwentyOneGame();
-            //game. Players = new List<string> () { "Jesse", "Bill", "Bob"};
-            //game.ListPlayers();
-            //Console.ReadLine();
-
-            //Game game = new TwentyOneGame();
-            //game.Players = new List<Player> ();
-            //Player player = new Player();
-            //player.Name = "Leslie";                       //Overloading operators 
-            //game += player;
-            //game -= player; 
 
             Player<Card> player = new Player<Card>();
             Deck deck = new Deck();
@@ -34,6 +23,8 @@ namespace TwentyOne_ClassesObjectsGame
             Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
+
+      
     }
    }
     
