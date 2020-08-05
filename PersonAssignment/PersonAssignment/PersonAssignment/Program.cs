@@ -16,16 +16,15 @@ namespace PersonAssignment
             //Console.WriteLine("Type Your name " + SayName);
             //Console.ReadLine();
 
-            string value = "Wednesday";
-
-            DayOfWeek week;
+      
          
             try
             {
-                week = (DaysOfTheWeek)Enum.Parse(typeof(DaysOfWeek), value);
+            
                 Console.WriteLine("Enter the current day of the week ");
-                Console.ReadLine();
-
+               string input = Console.ReadLine();
+             DaysOfTheWeek day = Enum.Parse<DaysOfTheWeek>(input);
+               
             }
             catch (Exception e)
             {

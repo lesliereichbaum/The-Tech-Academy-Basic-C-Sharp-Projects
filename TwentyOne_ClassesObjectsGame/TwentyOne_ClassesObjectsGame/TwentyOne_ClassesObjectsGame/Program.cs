@@ -15,7 +15,6 @@ namespace TwentyOne_ClassesObjectsGame
             Deck deck = new Deck();
             deck.Shuffle(3);
 
-
             foreach (Card card in deck.Cards)
             {
                 Console.WriteLine(card.Face + " of " + card.Suit);

@@ -8,7 +8,7 @@ namespace PersonAssignment
     {
         public int ID { get; set;  } //ID property with variable int 
     }
-    public enum DaysOfTheWeek
+   public enum DaysOfTheWeek
     {
         Monday,
         Tuesday,
