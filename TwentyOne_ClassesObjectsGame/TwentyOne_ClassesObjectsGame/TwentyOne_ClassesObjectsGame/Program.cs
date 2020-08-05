@@ -15,13 +15,14 @@ namespace TwentyOne_ClassesObjectsGame
             //game.ListPlayers();
             //Console.ReadLine();
 
-            Game game = new TwentyOneGame();
-            game.Players = new List<Player> ();
-            Player player = new Player();
-            player.Name = "Leslie";                       //Overloading operators 
-            game += player;
-            game -= player; 
+            //Game game = new TwentyOneGame();
+            //game.Players = new List<Player> ();
+            //Player player = new Player();
+            //player.Name = "Leslie";                       //Overloading operators 
+            //game += player;
+            //game -= player; 
 
+            Player<Card> player = new Player<Card>();
             Deck deck = new Deck();
             deck.Shuffle(3);
 

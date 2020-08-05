@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AbstractPersonAssignment
 {
@@ -17,12 +18,20 @@ namespace AbstractPersonAssignment
             IQuittable theyQuit = myEmployee;
             theyQuit.Quit(myEmployee.firstName, myEmployee.lastName);
 
-            //Attempt at overloading operators 
-            Employee employee = new Person();
-            employee.ID = new List<ID>();
-            employee.Person = "Leslie";
-            employee == IDi;
 
-        }
+            //Overload Operator: 
+            Employee emp1 = new Employee();  
+            emp1.Id = 1;
+            Employee emp2 = new Employee();
+            emp2.Id = 2;
+
+            Console.WriteLine(emp1 != emp2);
+            Console.ReadLine();
+
+  
+            
+
+
     }
+}
 }

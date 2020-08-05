@@ -6,6 +6,39 @@ namespace AbstractPersonAssignment
 {
     class Employee : Person, IQuittable
     {
+        public int Id { get; set; } //created property called Id
+
+        public static bool operator==(Employee employee1, Employee employee2)
+        {
+            bool result;
+            if (employee1.Id == employee2.Id) // Overload operator to check if ==
+            {
+                result = true;
+                
+            }
+            else
+            {
+                result = false; 
+            }
+            return result;
+        }
+
+        public static bool operator!=(Employee employee1, Employee employee2) //Overload operator to check !=
+        {
+            bool result;
+            if (employee1.Id != employee2.Id)
+            {
+                result = true;
+           
+            }
+            else
+            {
+                result = false; 
+               
+            }
+            return result; 
+        }
+
         public void SayName()
         {
             Console.WriteLine(firstName + " " + lastName);
@@ -16,12 +49,7 @@ namespace AbstractPersonAssignment
         }
         public int ID { get; set; } //ID property with variable int - added from Person Assignment Project
 
-        //Overloading operator ==
-        public static Employee==(Employee employee, ID id)
-            {
-            employee.Employee.Equal(id);
-            return employee; 
-            }
+     
            
     }
 }
