@@ -8,11 +8,10 @@ namespace PersonAssignment
     {
         public static void Main(string[] args)
         {
-            Employee employee = new Employee();
 
             //var employee = new List<Employee>(); //used for foreach loop list (questiosn 1-2)
 
-            string firstName = employee.Employee.firstName(x => x.firstName == FirstName.Joe);
+            List<Employee> employee = new List<Employee>();
 
             employee.Add(new Employee ("Joe", "Shmoe", 9));
             employee.Add(new Employee("Joe" , "Walsh", 8));
@@ -25,8 +24,10 @@ namespace PersonAssignment
             employee.Add(new Employee("Edith", "Pizza", 1));
             employee.Add(new Employee("Dougie" , "Jones", 0));
 
-          
-
+            foreach (Employee emp in employee.Where(x => x.FirstName == "Joe")); //lambda 
+            {
+                Console.WriteLine(employee);
+            }
 
             //foreach (Employee emp in employee)           //Searching employee with fname "joe" using foreach loop 
             //{

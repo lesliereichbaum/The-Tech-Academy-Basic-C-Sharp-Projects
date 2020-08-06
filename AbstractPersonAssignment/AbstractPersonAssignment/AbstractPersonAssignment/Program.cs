@@ -17,7 +17,7 @@ namespace AbstractPersonAssignment
 
           foreach (string element in thingsEmployee.things)
             {
-                Console.WriteLine( element); //not sure how to make string print 
+                Console.WriteLine( element); 
             }
 
           foreach (int element in numEmployee.things)
