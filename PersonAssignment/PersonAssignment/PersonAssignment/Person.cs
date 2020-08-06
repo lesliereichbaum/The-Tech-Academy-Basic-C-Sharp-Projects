@@ -7,9 +7,9 @@ namespace PersonAssignment
    public class Person
     {
     
-        public string FirstName  { get; set; } //property 
+        //public string FirstName  { get; set; } //property 
 
-        public string LastName { get; set; } //property 
+        //public string LastName { get; set; } //property 
 
 
         static void Sayname () //void Method called SayName that takes no parameters 
