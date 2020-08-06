@@ -8,24 +8,36 @@ namespace PersonAssignment
     {
         public static void Main(string[] args)
         {
-            /*public int Id { get; set; } *///created property called Id
+            Employee employee = new Employee();
 
-            var employee = new List<Employee>();
-            employee.Add(new Employee ("Joe", "Shmoe", 99));
-            employee.Add(new Employee("Joe" , "Walsh", 88));
-            employee.Add(new Employee("Alyssa", "Lollipop", 77));
-            employee.Add(new Employee("Anna", "Fruitloops", 66));
-            employee.Add(new Employee("Nick" ,"Tootsiepop", 55));
-            employee.Add(new Employee("Calvin" , "Marshmallow", 44));
-            employee.Add(new Employee("Sonny", "Moon", 33));
-            employee.Add(new Employee("Oliver",  "Ollie", 22));
-            employee.Add(new Employee("Edith", "Pizza", 11));
-            employee.Add(new Employee("Dougie" , "Jones", 00));
+            //var employee = new List<Employee>(); //used for foreach loop list (questiosn 1-2)
 
-            foreach (Employee emp in new List)
-            {
-                Console.WriteLine(firstName = "Joe");
-            }
+            string firstName = employee.Employee.firstName(x => x.firstName == FirstName.Joe);
+
+            employee.Add(new Employee ("Joe", "Shmoe", 9));
+            employee.Add(new Employee("Joe" , "Walsh", 8));
+            employee.Add(new Employee("Alyssa", "Lollipop", 7));
+            employee.Add(new Employee("Anna", "Fruitloops", 6));
+            employee.Add(new Employee("Nick" ,"Tootsiepop", 5));
+            employee.Add(new Employee("Calvin" , "Marshmallow", 4));
+            employee.Add(new Employee("Sonny", "Moon", 3));
+            employee.Add(new Employee("Oliver",  "Ollie", 2));
+            employee.Add(new Employee("Edith", "Pizza", 1));
+            employee.Add(new Employee("Dougie" , "Jones", 0));
+
+          
+
+
+            //foreach (Employee emp in employee)           //Searching employee with fname "joe" using foreach loop 
+            //{
+            //    if (emp.FirstName == "Joe")
+            //    {
+            //        var joeList = new List<Employee>();
+            //        joeList.Add(emp);
+            //    }
+            //}
+
+
 
             //double Number = 2.5;
             // Number myObj = new Number();
