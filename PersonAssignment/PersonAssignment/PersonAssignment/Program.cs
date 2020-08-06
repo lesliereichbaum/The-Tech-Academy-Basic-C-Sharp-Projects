@@ -7,6 +7,10 @@ namespace PersonAssignment
     {
         public static void Main(string[] args)
         {
+           double Number = 2.5;
+            Number myObj = new Number();
+            Console.WriteLine(Number);
+
             Employee SayName = new Employee()
             {
                 FirstName = "Sample",

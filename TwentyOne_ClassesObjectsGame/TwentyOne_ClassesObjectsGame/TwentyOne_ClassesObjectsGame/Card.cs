@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TwentyOne_ClassesObjectsGame
 {
-   public class Card
+   public struct Card   //Changed data type to struct 
     {
         //Properties (light blue) are now an enum type 
         public Suit Suit { get; set; } 
