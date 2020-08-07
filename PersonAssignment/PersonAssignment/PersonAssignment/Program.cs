@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 
 namespace PersonAssignment
@@ -13,20 +14,25 @@ namespace PersonAssignment
 
             List<Employee> employee = new List<Employee>();
 
-            employee.Add(new Employee ("Joe", "Shmoe", 9));
-            employee.Add(new Employee("Joe" , "Walsh", 8));
+            employee.Add(new Employee("Joe", "Shmoe", 9));
+            employee.Add(new Employee("Joe", "Walsh", 8));
             employee.Add(new Employee("Alyssa", "Lollipop", 7));
             employee.Add(new Employee("Anna", "Fruitloops", 6));
-            employee.Add(new Employee("Nick" ,"Tootsiepop", 5));
-            employee.Add(new Employee("Calvin" , "Marshmallow", 4));
+            employee.Add(new Employee("Nick", "Tootsiepop", 5));
+            employee.Add(new Employee("Calvin", "Marshmallow", 4));
             employee.Add(new Employee("Sonny", "Moon", 3));
-            employee.Add(new Employee("Oliver",  "Ollie", 2));
+            employee.Add(new Employee("Oliver", "Ollie", 2));
             employee.Add(new Employee("Edith", "Pizza", 1));
-            employee.Add(new Employee("Dougie" , "Jones", 0));
+            employee.Add(new Employee("Dougie", "Jones", 0));
 
-            foreach (Employee emp in employee.Where(x => x.FirstName == "Joe")); //lambda 
+            List<Employee> newJoeList = employee.Where(x => x.FirstName == "Joe").ToList();
+
+            List<Employee> IdFiveList = employee.Where(x => x.ID > 5).ToList();
+
+            foreach (Employee idFive in IdFiveList)
             {
-                Console.WriteLine(employee);
+
+                Console.WriteLine(idFive.ID);
             }
 
             //foreach (Employee emp in employee)           //Searching employee with fname "joe" using foreach loop 
