@@ -12,7 +12,7 @@ namespace TwentyOne_ClassesObjectsGame
 
         public override string ToString()
         {
-            return string.Format("{0} of {1}, Face, Suit");
+          return string.Format("{0} of {1}", Face, Suit);
         }
     }
 

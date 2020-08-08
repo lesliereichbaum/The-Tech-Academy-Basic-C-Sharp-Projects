@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TwentyOne_ClassesObjectsGame
 {
-   public  class Player <Card> // generics ex: T reps the type to be passed in
+   public  class Player 
     {
         public Player (string name, int beginningBalance)
         {
@@ -12,7 +12,8 @@ namespace TwentyOne_ClassesObjectsGame
             Balance = beginningBalance;
             Name = name;
         }
-        public  List <Card> Hand { get; set; }
+        private List<Card> _hand = new List<Card>();
+        public  List <Card> Hand { get { return _hand; } set { _hand = value; }  }
         public int Balance { get; set; }
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }

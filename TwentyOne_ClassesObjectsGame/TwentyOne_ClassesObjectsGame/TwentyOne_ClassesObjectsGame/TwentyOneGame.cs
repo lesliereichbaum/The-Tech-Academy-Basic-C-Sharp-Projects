@@ -21,24 +21,26 @@ namespace TwentyOne_ClassesObjectsGame
             Dealer.Hand = new List<Card>();
             Dealer.Stay = false;
             Dealer.Deck = new Deck();
+            Dealer.Deck.Shuffle();
+
             Console.WriteLine("Please your bet!");
 
-            foreach(Player player in Players)
-                {
+            foreach (Player player in Players)
+            {
                 int bet = Convert.ToInt32(Console.ReadLine());
                 bool successfullyBet = player.Bet(bet);
                 if (!successfullyBet)
                 {
                     return;
                 }
-                Bets(player) = bet; 
-           }
+                Bets[player] = bet;
+            }
             for (int i = 0; i < 2; i++)
             {
                 Console.WriteLine("Dealing...");
-                foreach(Player player in Player)
+                foreach (Player player in Players)
                 {
-                    Console.Write("{0}: ", player.Name)
+                    Console.Write("{0}: ", player.Name);
                     Dealer.Deal(player.Hand);
                     if (i == 1)
                     {
@@ -53,7 +55,7 @@ namespace TwentyOne_ClassesObjectsGame
                 }
                 Console.Write("Dealer: ");
                 Dealer.Deal(Dealer.Hand);
-                if (i== 1)
+                if (i == 1)
                 {
                     bool blackJack = TwentyOneRules.CheckForBlackJack(Dealer.Hand);
                     if (blackJack)
@@ -63,20 +65,32 @@ namespace TwentyOne_ClassesObjectsGame
                         {
                             Dealer.Balance += entry.Value;
                         }
+                        return;
                     }
                 }
             }
             foreach (Player player in Players)
             {
-                while (player.Stay)
+                Console.WriteLine("\n\nHit or stay?");
+                string answer = Console.ReadLine().ToLower();
+                if (answer == "stay")
+                {
+                    player.Stay = true;
+                    break;
+                }
+                else if (answer == "hit")
+                {
+                    Dealer.Deal(player.Hand);
+                }
+                while (!player.Stay)
                 {
                     Console.WriteLine("Your cards are: ");
-                    foreach(Card card in Player.Hand)
+                    foreach (Card card in player.Hand)
                     {
                         Console.Write("{0} ", card.ToString());
                     }
                     Console.WriteLine("\n\nHit or stay?");
-                    string answer = Console.ReadLine().ToLower();
+                    answer = Console.ReadLine().ToLower();
                     if (answer == "stay")
                     {
                         player.Stay = true;
@@ -96,10 +110,12 @@ namespace TwentyOne_ClassesObjectsGame
                         if (answer == "yes" || answer == "yeah")
                         {
                             player.isActivelyPlaying = true;
+                            return;
                         }
                         else
                         {
-                            player.isActivelyPlaying = false; 
+                            player.isActivelyPlaying = false;
+                            return;
                         }
                     }
                 }
@@ -107,12 +123,12 @@ namespace TwentyOne_ClassesObjectsGame
             Dealer.isBusted = TwentyOneRules.IsBusted(Dealer.Hand);
             Dealer.Stay = TwentyOneRules.ShouldDealerStay(Dealer.Hand);
             while (!Dealer.Stay && !Dealer.isBusted)
-                {
+            {
                 Console.WriteLine("Dealer is hitting...");
                 Dealer.Deal(Dealer.Hand);
                 Dealer.isBusted = TwentyOneRules.IsBusted(Dealer.Hand);
                 Dealer.Stay = TwentyOneRules.ShouldDealerStay(Dealer.Hand);
-                 }
+            }
             if (Dealer.Stay)
             {
                 Console.WriteLine("Dealer is staying.");
@@ -122,12 +138,12 @@ namespace TwentyOne_ClassesObjectsGame
                 Console.WriteLine("Dealer Busted!");
                 foreach (KeyValuePair<Player, int> entry in Bets)
                 {
-                    Console.WriteLine("{0} won {1}!," , entry.Key.Name, entry.Value);
+                    Console.WriteLine("{0} won {1}!,", entry.Key.Name, entry.Value);
                     Players.Where(x => x.Name == entry.Key.Name).First().Balance += (entry.Value * 2);
                     Dealer.Balance -= entry.Value;
 
                 }
-                return; 
+                return;
             }
             foreach (Player player in Players)
             {
@@ -157,10 +173,10 @@ namespace TwentyOne_ClassesObjectsGame
                 }
                 else
                 {
-                    player.isActivelyPlaying = false; 
+                    player.isActivelyPlaying = false;
                 }
             }
-           
+
         }
         public override void ListPlayers()
         {
