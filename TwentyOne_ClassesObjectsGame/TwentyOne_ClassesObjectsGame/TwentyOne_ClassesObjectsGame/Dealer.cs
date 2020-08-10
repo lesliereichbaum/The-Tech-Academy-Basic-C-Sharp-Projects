@@ -21,6 +21,7 @@ namespace TwentyOne_ClassesObjectsGame
             Console.WriteLine(card);
             using (StreamWriter file = new StreamWriter(@"C:\Users\Student\Downloads\myProjects.txt", true)) 
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             }
                 Deck.Cards.RemoveAt(0);
