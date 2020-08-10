@@ -23,7 +23,7 @@ namespace TwentyOne_ClassesObjectsGame
             Dealer.Deck = new Deck();
             Dealer.Deck.Shuffle();
 
-            Console.WriteLine("Please your bet!");
+            Console.WriteLine("Place your bet!");
 
             foreach (Player player in Players)
             {

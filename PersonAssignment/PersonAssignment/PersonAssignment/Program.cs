@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.IO;
 
 namespace PersonAssignment
 {
@@ -34,6 +35,16 @@ namespace PersonAssignment
 
                 Console.WriteLine(idFive.ID);
             }
+
+            //APPENDING A FILE 
+            Console.WriteLine("Type your favorite number into the console.");
+            Console.ReadLine();
+            String text = "This is the users favorite number";
+            File.WriteAllText(@"C:\Users\Student\Downloads\myProjects.txt", text);
+            File.ReadAllText(@"C\Users\Student\Downloads\myProjects.txt");
+            using (StreamWriter file = new StreamWriter(@"C:\Users\Student\Downloads\myProjects.txt", true)) ;
+
+
 
             //foreach (Employee emp in employee)           //Searching employee with fname "joe" using foreach loop 
             //{
