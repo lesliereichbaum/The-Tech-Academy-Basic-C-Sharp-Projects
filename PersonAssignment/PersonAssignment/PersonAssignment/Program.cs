@@ -38,11 +38,12 @@ namespace PersonAssignment
 
             //APPENDING A FILE 
             Console.WriteLine("Type your favorite number into the console.");
-            Console.ReadLine();
+            string userNum = Console.ReadLine();
             String text = "This is the users favorite number";
-            File.WriteAllText(@"C:\Users\Student\Downloads\myProjects.txt", text);
-            File.ReadAllText(@"C\Users\Student\Downloads\myProjects.txt");
-            using (StreamWriter file = new StreamWriter(@"C:\Users\Student\Downloads\myProjects.txt", true)) ;
+            File.WriteAllText(@"C:\Users\Student\Downloads\myProjects.txt", userNum);
+            File.ReadAllText(@"C:\Users\Student\Downloads\myProjects.txt");
+            using (StreamWriter file = new StreamWriter(@"C:\Users\Student\Downloads\myProjects.txt", true));
+            Console.WriteLine("Your favorite number is: " + File.ReadAllText(@"C:\Users\Student\Downloads\myProjects.txt"));
 
 
 

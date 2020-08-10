@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace TwentyOne_ClassesObjectsGame
+namespace Casino 
 {
     public class Dealer
     {

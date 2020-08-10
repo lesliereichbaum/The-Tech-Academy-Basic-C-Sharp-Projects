@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TwentyOne_ClassesObjectsGame
+namespace Casino
 {
    public  class Player 
     {
+        public Player (string name) : this(name, 100)
+        {
+
+        }
         public Player (string name, int beginningBalance)
         {
             Hand = new List<Card>();
@@ -18,6 +22,8 @@ namespace TwentyOne_ClassesObjectsGame
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }
         public bool Stay { get; set; }
+        public Guid Id { get; set; }
+        //public bool Bet (int amount)
 
         public bool Bet(int amount)
         {

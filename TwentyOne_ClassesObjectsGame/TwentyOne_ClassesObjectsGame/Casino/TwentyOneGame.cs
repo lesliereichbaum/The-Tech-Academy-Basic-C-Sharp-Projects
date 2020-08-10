@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
-namespace TwentyOne_ClassesObjectsGame
+namespace Casino.TwentyOne_ClassesObjectsGame
 {
     public class TwentyOneGame : Game, IWalkAway
     {
