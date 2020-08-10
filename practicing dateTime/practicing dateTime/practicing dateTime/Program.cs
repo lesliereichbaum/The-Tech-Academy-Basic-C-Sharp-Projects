@@ -18,10 +18,12 @@ namespace practicing_dateTime
             Console.WriteLine("TODAY\'s DATE: " + employee.TodaysDate);
 
             Console.WriteLine("Give me a number and I will show you the exact time in that many hours.");
-            int userInput = Convert.ToInt32(Console.ReadLine());
-           int hours = userInput;
-            TimeSpan TimeSpan = new TimeSpan(int hours);
-            Console.WriteLine(TimeSpan);
+           int userInput = (int)Convert.ToDouble(Console.ReadLine());
+           double hours = userInput;
+            now = now.AddHours(userInput);
+            Console.WriteLine(now);
+      
+   
         }
         
         
